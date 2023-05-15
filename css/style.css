@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 65px;
+}
+
+.nav-container .logo img {
+    height: 80px;
+    width: 150px;
+}
+
+.nav-container .nav-links {
+    width: 30%;
+    margin-right: 175px;
+}
+
+.nav-container .nav-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-container .nav-links ul li {
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 25px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-container .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-container .nav-right-content {
+    margin-right: -100px;
+}
+
+.container .banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .banner video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container .banner h1 {
+    color: #fff;
+    font-size: 5.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.container .banner p {
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    z-index: 1;
+
+}
