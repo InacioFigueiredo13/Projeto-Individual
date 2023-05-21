@@ -139,12 +139,12 @@ body {
 .carousel-historia-container {
     margin-top: -65px;
     overflow: hidden;
-    height: 100vh;
+    height: 700px;
 }
 
 .slides {
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 400%;
 }
 
@@ -210,16 +210,18 @@ body {
     transition: 1.5s;
 }
 
-.slide p mark{
+.slide p mark {
     background-color: transparent;
     font-style: italic;
     color: #B73E3E;
 }
 
-.slide .last-text{
+.slide .last-text {
     margin-top: 50px;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1px;
+    text-decoration: underline;
+    color: #B73E3E;
 }
 
 .slide ol {
@@ -228,7 +230,7 @@ body {
     margin-left: 30px;
 }
 
-.slide ol li{
+.slide ol li {
     font-family: 'Lato';
     font-size: 1.75rem;
     font-weight: bold;
@@ -289,7 +291,7 @@ body {
 .navigation-auto {
     position: absolute;
     width: 100%;
-    margin-top: 602px;
+    margin-top: 645px;
     display: flex;
     justify-content: center;
 
@@ -313,4 +315,290 @@ body {
 
 #radio4:checked~.navigation-auto .auto-btn4 {
     background-color: #CCCCCC;
+}
+
+.criterios-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.criterios-section-title {
+    line-height: 40px;
+    color: #B73E3E;
+    font-family: 'Bebas Neue';
+    font-size: 2.2rem;
+    transition: 1s;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+.criterio-left {
+    display: flex;
+    width: 100%;
+}
+
+.criterio-left .criterio-descricao {
+    width: 35%;
+}
+
+.criterio-left .criterio-descricao h3 {
+    font-family: 'Lato';
+    font-size: 1.75rem;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #B73E3E;
+}
+
+
+.criterio-left .criterio-descricao p {
+    font-family: 'Lato';
+    font-size: 1.2rem;
+}
+
+.criterio-right {
+    display: flex;
+    width: 100%;
+}
+
+.criterio-right .criterio-descricao {
+    width: 35%;
+    margin-left: auto;
+}
+
+.criterio-right .criterio-descricao h3 {
+    font-family: 'Lato';
+    font-size: 1.75rem;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #B73E3E;
+}
+
+
+.criterio-right .criterio-descricao p {
+    font-family: 'Lato';
+    font-size: 1.2rem;
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-image: url(../assets/bg-links-layer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+}
+
+.left-side,
+.right-side {
+    width: 50%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.left-side h3,
+.right-side h3 {
+    font-family: 'Bebas Neue';
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+.left-side p,
+.right-side p {
+    font-family: 'Lato';
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-top: -125px;
+    width: 65%;
+    text-align: center;
+}
+
+.link-btn {
+    font-family: 'Bebas Neue';
+    padding: 30px 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.left-side .link-btn {
+    background-color: #dd5353;
+    color: #fff;
+}
+
+.right-side .link-btn {
+    background-color: #DBC8AC;
+}
+
+.left-side .link-btn:hover {
+    background-color: #dd5353;
+    color: #fff;
+    transition: 0.5s;
+    transform: scale(1.2);
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.right-side .link-btn:hover {
+    background-color: #DBC8AC;
+    transition: 0.5s;
+    transform: scale(1.2);
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pilotos-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.pilotos-title {
+    color: #B73E3E;
+    font-family: 'Bebas Neue';
+    font-size: 2.2rem;
+    transition: 1s;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+.pilotos-title-img {
+    width: 20%;
+    margin-top: -50px;
+}
+
+.pilotos {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.piloto-informations {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.piloto-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 25%;
+    margin: 10px 15px;
+    padding: 25px 0;
+    background-color: #B73E3E;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.piloto-card button {
+    border: 0;
+    background-color: transparent;
+    margin-left: 270px;
+    margin-top: -15px;
+    cursor: pointer;
+}
+
+.piloto-card button img {
+    height: 35px;
+    width: 35px;
+}
+
+.piloto-nome-bandeira {
+    display: flex;
+    width: 100%;
+    background-color: #DD5353;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: -23px;
+}
+
+.piloto-nome-bandeira p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Lato';
+    color: #fff;
+    margin-right: 15px;
+}
+
+.info-title {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Lato';
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+.info {
+    font-weight: 500;
+    font-family: 'Lato';
+}
+
+.ver-mais-piloto {
+    color: #B73E3E;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-left: 15px;
+}
+
+footer .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #B73E3E;
+    width: 100%;
+    margin-top: 100px;
+    padding: 20px 0;
+    box-shadow: 0px -9px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer .footer-container img {
+    width: 165px;
+    height: 75px;
+}
+
+footer .footer-container .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+footer .footer-container .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    margin: 25px 0;
+    letter-spacing: 1px;
+}
+
+footer .footer-container .footer-links a:not(:last-child) {
+    margin-right: 50px;
+}
+
+footer .footer-container .footer-links a:hover {
+    color: #DD5353;
+}
+
+footer .footer-container p{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
 }
