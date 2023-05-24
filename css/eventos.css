@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #DD5353;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+}
+
+.nav-left-content {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-container .nav-left-content .logo img {
+    width: 130px;
+}
+
+.nav-container .nav-left-content .nav-links {
+    width: 40%;
+    margin-right: 175px;
+}
+
+.nav-container .nav-left-content .nav-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-container .nav-left-content .nav-links ul li {
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 25px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.nav-container .nav-left-content .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-container .nav-left-content .nav-links ul li a:hover {
+    transition: 300ms ease;
+    color: #B73E3E;
+}
+
+.nav-container .nav-right-content {
+    width: 125px;
+    height: 65px;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-container .nav-right-content .login-icon,
+.nav-container .nav-right-content .agenda-icon {
+    cursor: pointer;
+}
+
+.nav-container .nav-right-content a img {
+    height: 25px;
+    width: 20px;
+}
+
+.nav-container .nav-right-content .agenda-icon img {
+    height: 30px;
+    width: 30px;
+}
+
+.nav-container .login-icon:hover,
+.nav-container .agenda-icon:hover {
+    transition: 300ms;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: #c2c2c2c2;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-container {
+    background-color: white;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    align-self: flex-start;
+}
+
+.title-container span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 5px 0;
+    width: 100%;
+
+}
+
+.carousel-agenda-container {
+    display: flex;
+    height: 70vh;
+    width: 85%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.evento-card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.evento-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 315px;
+    text-align: center;
+}
+
+.barra-lado:not(even) {
+    height: 265px;
+    border-left: 0.5px solid #fff;
+}
+
+.evento-logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.span-rodada {
+    color: #fff;
+    font-family: 'Bebas Neue';
+    line-height: 15px;
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+
+.localizacao-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.localizacao-img {
+    width: 20px;
+    height: 15px;
+}
+
+.span-localizacao {
+    color: #EDDBC0;
+    font-family: 'Bebas Neue';
+    line-height: 40px;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    margin-left: 10px;
+}
+
+.data-hora-evento {
+    color: #fff;
+    font-family: 'Bebas Neue';
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin: 25px 0;
+}
+
+.btn-marcado {
+    padding: 10px 65px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.btn-marcado:hover {
+    color: #B73E3E;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.seta-left-carousel {
+    width: 80px;
+    height: 80px;
+}
+
+.seta-left-carousel {
+    width: 50px;
+    height: 50px;
+}
+
+.seta-direita-carousel {
+    width: 50px;
+    height: 50px;
+}
+
+.btn-left-carousel {
+    position: absolute;
+    left: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+
+.btn-right-carousel {
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+
+.btn-left-carousel:hover,
+.btn-right-carousel:hover {
+    transform: scale(1.2);
+}

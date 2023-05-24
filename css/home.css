@@ -8,6 +8,7 @@
 
 body {
     width: 100%;
+    height: 100%;
 }
 
 .nav-container {
@@ -61,16 +62,17 @@ body {
 }
 
 .nav-container .nav-right-content {
-    width: 55px;
+    width: 125px;
     height: 65px;
     position: absolute;
-    right: 20px;
+    right: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
-.nav-container .nav-right-content .login-icon {
+.nav-container .nav-right-content .login-icon,
+.nav-container .nav-right-content .agenda-icon {
     cursor: pointer;
 }
 
@@ -79,7 +81,13 @@ body {
     width: 20px;
 }
 
-.nav-container .login-icon:hover {
+.nav-container .nav-right-content .agenda-icon img {
+    height: 30px;
+    width: 30px;
+}
+
+.nav-container .login-icon:hover,
+.nav-container .agenda-icon:hover {
     transition: 300ms;
     padding: 10px;
     border-radius: 100px;
@@ -597,7 +605,7 @@ footer .footer-container .footer-links a:hover {
     color: #DD5353;
 }
 
-footer .footer-container p{
+footer .footer-container p {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.9rem;
     letter-spacing: 1px;
