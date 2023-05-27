@@ -123,12 +123,14 @@ body {
 }
 
 .carousel-agenda-container {
-    display: flex;
-    height: 70vh;
-    width: 85%;
+    width: 90%;
     overflow: hidden;
-    align-items: center;
-    justify-content: center;
+    margin-top: 50px;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
 }
 
 .evento-card-container {
@@ -210,24 +212,16 @@ body {
     transition: 0.5s;
 }
 
-.seta-left-carousel {
-    width: 80px;
-    height: 80px;
-}
-
-.seta-left-carousel {
-    width: 50px;
-    height: 50px;
-}
-
+.seta-left-carousel,
 .seta-direita-carousel {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
 
 .btn-left-carousel {
     position: absolute;
-    left: 50px;
+    left: 20px;
+    top: 400px;
     cursor: pointer;
     background-color: transparent;
     border: 0;
@@ -235,7 +229,8 @@ body {
 
 .btn-right-carousel {
     position: absolute;
-    right: 50px;
+    right: 20px;
+    top: 400px;
     cursor: pointer;
     background-color: transparent;
     border: 0;
