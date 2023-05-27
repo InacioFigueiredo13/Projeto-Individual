@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,6 +11,7 @@ body {
     height: 100%;
     background-color: #DD5353;
 }
+
 
 .nav-container {
     display: flex;
@@ -91,7 +92,7 @@ body {
     transition: 300ms;
     padding: 10px;
     border-radius: 100px;
-    background-color: #EDDBC0;
+    background-color: #c2c2c2c2;
 }
 
 .nav-container .user_login {
@@ -136,145 +137,116 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 90vh;
 }
 
-.title-container {
-    background-color: white;
+.right-content {
+    display: flex;
+    justify-content: center;
     width: 30%;
+    height: 85%;
+    background-position: center;
+    background-image: url(../assets/login-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #DBC8AC;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.right-content .logo {
+    position: relative;
+    width: 200px;
+    height: 90px;
+    margin-top: 35px;
+}
+
+
+.left-content {
     display: flex;
-    align-items: center;
-    text-align: center;
-    margin-top: 50px;
-    align-self: flex-start;
-}
-
-.title-container span {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    letter-spacing: 5px;
-    text-align: center;
-    margin: 5px 0;
-    width: 100%;
-
-}
-
-.carousel-agenda-container {
-    width: 90%;
-    overflow: hidden;
-    margin-top: 50px;
-}
-
-.carousel-slides {
-    display: flex;
-    transition: transform 0.7s ease-in-out;
-}
-
-.evento-card-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.evento-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    height: 100%;
-    width: 315px;
-    text-align: center;
-}
-
-.barra-lado:not(even) {
-    height: 265px;
-    border-left: 0.5px solid #fff;
-}
-
-.evento-logo {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 15px;
-}
-
-.span-rodada {
-    color: #fff;
-    font-family: 'Bebas Neue';
-    line-height: 15px;
-    font-size: 2rem;
-    letter-spacing: 5px;
-}
-
-.localizacao-container {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 30%;
+    height: 85%;
+    background-color: #B73E3E;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
-.localizacao-img {
-    width: 20px;
-    height: 15px;
-}
-
-.span-localizacao {
-    color: #EDDBC0;
-    font-family: 'Bebas Neue';
-    line-height: 40px;
-    font-size: 1.1rem;
-    letter-spacing: 3px;
-    margin-left: 10px;
-}
-
-.data-hora-evento {
-    color: #fff;
-    font-family: 'Bebas Neue';
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    margin: 25px 0;
-}
-
-.btn-marcado {
-    padding: 10px 65px;
-    background-color: transparent;
-    border: 1px solid #fff;
-    letter-spacing: 3px;
-    font-size: 2rem;
-    color: #fff;
+.left-content h1 {
     font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    padding: 30px 0;
+    letter-spacing: 4px;
+    font-size: 2rem;
 }
 
-.btn-marcado:hover {
-    color: #B73E3E;
-    background-color: #fff;
+.login-fields {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+.login-fields .ipt-login:not(:first-child) {
+    margin-top: 15px;
+}
+
+.login-fields .ipt-login {
+    border: 0;
+    padding: 15px;
+    border-bottom: 3px ridge #DD5353;
+    background-color: transparent;
+    font-size: 0.9rem;
+    font-family: 'Lato', sans-serif;
     transition: 0.5s;
+    color: #fff;
 }
 
-.seta-left-carousel,
-.seta-direita-carousel {
-    width: 30px;
-    height: 30px;
+.login-fields .ipt-login::placeholder{
+    color: #DBC8AC;
+    letter-spacing: 1px;
 }
 
-.btn-left-carousel {
-    position: absolute;
-    left: 20px;
-    top: 400px;
-    cursor: pointer;
-    background-color: transparent;
+.login-fields .ipt-login:focus {
+    outline: none;
+    border-bottom: 3px ridge #DBC8AC;
+}
+
+.btn_login {
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 15px 60px;
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    color: #fff;
+    background-color: #DD5353;
     border: 0;
-}
-
-.btn-right-carousel {
-    position: absolute;
-    right: 20px;
-    top: 400px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 10px 9px 25px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
     cursor: pointer;
-    background-color: transparent;
-    border: 0;
 }
 
-.btn-left-carousel:hover,
-.btn-right-carousel:hover {
-    transform: scale(1.2);
+.btn_login:hover {
+    transform: scale(1.1);
+}
+
+.cadastro-redirect p {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 50px;
+    margin-top: -20px;
+    font-style: italic;
+    line-height: 36px;
+    letter-spacing: 2px;
+}
+
+.cadastro-redirect a {
+    color: #DBC8AC;
+    font-weight: bold;
 }

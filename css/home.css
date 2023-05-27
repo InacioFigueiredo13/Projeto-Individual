@@ -91,7 +91,45 @@ body {
     transition: 300ms;
     padding: 10px;
     border-radius: 100px;
-    background-color: #c2c2c2c2;
+    background-color: #EDDBC0;
+}
+
+.nav-container .user_login {
+    display: none;
+    width: auto;
+    background-color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    transition: 1s;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.nav-container .user_login a:hover {
+    background-color: #EDDBC0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.nav-container .user_login a:not(:last-child:hover) {
+    border-top-left-radius: 20px;
+}
+
+.nav-container .user_login a {
+    display: block;
+    padding: 20px 20px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: 0.5s;
+    color: #DD5353;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+}
+
+.nav-container .user_login a:not(:last-child) {
+    border-bottom: 1px solid #DBC8AC;
 }
 
 .container {

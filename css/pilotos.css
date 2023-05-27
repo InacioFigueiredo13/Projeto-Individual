@@ -91,7 +91,7 @@ body {
     transition: 300ms;
     padding: 10px;
     border-radius: 100px;
-    background-color: #EDDBC0;
+    background-color: #c2c2c2c2;
 }
 
 .nav-container .user_login {
@@ -160,121 +160,130 @@ body {
 
 }
 
-.carousel-agenda-container {
-    width: 90%;
-    overflow: hidden;
+.container-pilotos {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
     margin-top: 50px;
 }
 
-.carousel-slides {
+.card-piloto {
     display: flex;
-    transition: transform 0.7s ease-in-out;
+    width: 80%;
+    align-items: center;
+    background-color: #EDDBC0;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: inset 0px -25px 30px -10px rgba(0, 0, 0, 0.21);
 }
 
-.evento-card-container {
+.card-piloto:not(:first-child) {
+    margin-top: 20px;
+}
+
+.card-piloto:hover {
+    transform: scale(1.02);
+    transition: 0.5s ease-in-out;
+}
+
+.destaque {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    background-color: #B73E3E;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.infos-ranking {
+    display: flex;
     align-items: center;
 }
 
-.evento-card {
+.bar {
+    width: 3px;
+    height: 65px;
+    background-color: #EDDBC0;
+    margin: 0 30px;
+}
+
+.infos-ranking img {
+    width: 100px;
+    height: 100px;
+}
+
+.card-piloto .piloto-posicao,
+.card-piloto .piloto-info,
+.card-piloto .piloto-pontuacao,
+.card-piloto .piloto-pontuacao-diferenca {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    height: 100%;
-    width: 315px;
-    text-align: center;
-}
-
-.barra-lado:not(even) {
-    height: 265px;
-    border-left: 0.5px solid #fff;
-}
-
-.evento-logo {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 15px;
-}
-
-.span-rodada {
-    color: #fff;
-    font-family: 'Bebas Neue';
-    line-height: 15px;
-    font-size: 2rem;
-    letter-spacing: 5px;
-}
-
-.localizacao-container {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 0 30px;
 }
 
-.localizacao-img {
-    width: 20px;
-    height: 15px;
-}
-
-.span-localizacao {
-    color: #EDDBC0;
-    font-family: 'Bebas Neue';
-    line-height: 40px;
-    font-size: 1.1rem;
-    letter-spacing: 3px;
-    margin-left: 10px;
-}
-
-.data-hora-evento {
-    color: #fff;
-    font-family: 'Bebas Neue';
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    margin: 25px 0;
-}
-
-.btn-marcado {
-    padding: 10px 65px;
-    background-color: transparent;
-    border: 1px solid #fff;
-    letter-spacing: 3px;
+.card-piloto .infos-ranking .piloto-posicao .posicao {
     font-size: 2rem;
-    color: #fff;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    padding: 5px 0;
 }
 
-.btn-marcado:hover {
-    color: #B73E3E;
-    background-color: #fff;
-    transition: 0.5s;
+.card-piloto .infos-ranking .piloto-posicao .posicao-subtitle,
+.card-piloto .piloto-info .piloto-team {
+    font-size: 0.6rem;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.seta-left-carousel,
-.seta-direita-carousel {
-    width: 30px;
-    height: 30px;
+.card-piloto .piloto-info .piloto-nome {
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 0;
 }
 
-.btn-left-carousel {
-    position: absolute;
-    left: 20px;
-    top: 400px;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
+.card-piloto .piloto-pontuacao .pontos {
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 0;
 }
 
-.btn-right-carousel {
-    position: absolute;
-    right: 20px;
-    top: 400px;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
+.card-piloto .piloto-pontuacao .pontos-subtitle {
+    font-size: 0.6rem;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.btn-left-carousel:hover,
-.btn-right-carousel:hover {
-    transform: scale(1.2);
+.card-piloto .piloto-pontuacao-diferenca .pontos-diferenca {
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.card-piloto .piloto-pontuacao-diferenca .pontos-diferenca.abaixo {
+    color: #DD5353;
+}
+
+.card-piloto .piloto-pontuacao-diferenca .pontos-diferenca.igual {
+    color: #DD5353;
+}
+
+.card-piloto .piloto-pontuacao-diferenca .pontos-diferenca-subtitle {
+    font-size: 0.6rem;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.card-piloto .dif-pontos-img {
+    width: 50px;
 }

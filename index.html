@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/home.css">
-    <title>Home</title>
+    <title>Dorifto</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./pilotos.html">
                             PILOTOS
                         </a>
                     </li>
@@ -39,9 +39,13 @@
             <a class="agenda-icon">
                 <img src="./assets/icon-agenda.png" alt="ICONE DE CALENDÁRIO">
             </a>
-            <a class="login-icon">
+            <a class="login-icon" id="login_icon">
                 <img src="./assets/icon-user.png" alt="ICONE DO USUÁRIO">
             </a>
+        </div>
+        <div class="user_login" id="user_login_cadastro">
+            <a href="#" id="logar">ENTRAR</a>
+            <a href="#" id="cadastrar">CADASTRAR-SE</a>
         </div>
     </nav>
     <main>
@@ -203,7 +207,7 @@
                 <div class="right-side">
                     <h3>RANKING DE PILOTOS</h3>
                     <p>Conheça o TOP 15 Pilotos do Drift profissional e escolha seu preferido</p>
-                    <a href="./eventos.html">
+                    <a href="./pilotos.html">
                         <button class="link-btn">
                             CLIQUE AQUI
                         </button>
@@ -264,7 +268,7 @@
                             <p class="info-title">Fabricante do Pneu: <span class="info">GT Radial</span></p>
                         </div>
                     </div>
-                    <a href="#" class="ver-mais-piloto">VER MAIS PILOTOS</a>
+                    <a href="./pilotos.html" class="ver-mais-piloto">VER MAIS PILOTOS</a>
                 </div>
             </section>
     </main>
@@ -282,6 +286,7 @@
     </footer>
 
     <script src="scripts/carousel.js"></script>
+    <script src="scripts/user_icon.js"></script>
 </body>
 
 </html>

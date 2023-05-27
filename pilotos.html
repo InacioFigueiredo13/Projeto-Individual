@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilotos</title>
+    <link rel="stylesheet" href="./css/pilotos.css">
+</head>
+
+<body>
+    <nav class="nav-container">
+        <div class="nav-left-content">
+            <div class="logo">
+                <img src="./assets/logo_white.png" alt="Logo">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="./index.html">
+                            INÍCIO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./eventos.html">
+                            EVENTOS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pilotos.html">
+                            PILOTOS
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-right-content">
+            <a class="agenda-icon">
+                <img src="./assets/icon-agenda.png" alt="ICONE DE CALENDÁRIO">
+            </a>
+            <a class="login-icon" id="login_icon">
+                <img src="./assets/icon-user.png" alt="ICONE DO USUÁRIO">
+            </a>
+        </div>
+        <div class="user_login" id="user_login_cadastro">
+            <a href="#" id="logar">ENTRAR</a>
+            <a href="#" id="cadastrar">CADASTRAR-SE</a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="title-container">
+                <span>RANKING DE PILOTOS</span>
+            </div>
+            <div class="container-pilotos">
+                <div class="card-piloto">
+                    <div class="destaque">
+                        <div class="infos-ranking">
+                            <img src="./assets/piloto01.png" alt="Imagem Piloto">
+                            <div class="piloto-posicao">
+                                <span class="posicao">1°</span>
+                                <span class="posicao-subtitle">POSIÇÃO</span>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="piloto-info">
+                            <span class="piloto-nome">matt field</span>
+                            <span class="piloto-team">Drift Cave Motorsports</span>
+                        </div>
+                    </div>
+                    <div class="piloto-pontuacao">
+                        <span class="pontos">150</span>
+                        <span class="pontos-subtitle">PONTUAÇÃO</span>
+                    </div>
+                    <div class="piloto-pontuacao-diferenca">
+                        <span class="pontos-diferenca abaixo">-10</span>
+                        <span class="pontos-diferenca-subtitle">DIFERENÇA DE PONTOS</span>
+                    </div>
+                    <div class="img-pontos-status">
+                        <img src="./assets/lower-points.png" class="dif-pontos-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/user_icon.js"></script>
+</body>
+
+</html>
