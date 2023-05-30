@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/modals/erro-login.css">
 </head>
 
 <body>
@@ -57,7 +58,7 @@
                     <input type="password" class="ipt-login" id="ipt_senha" placeholder="Senha">
                 </div>
 
-                <button class="btn_login">Log in</button>
+                <button class="btn_login" onclick="entrar()">Log in</button>
 
                 <div class="cadastro-redirect">
                     <p> Ainda não tem conta? <a href="./cadastro.html">Cadastre-se</a>!</p>
@@ -68,10 +69,22 @@
                 <img class="logo" src="./assets/logo.png" alt="logo">
             </div>
         </div>
+        </div>
+        <div class="container-modal" id="container-modal">
+            <div class="modal-box" id="modal-box">
+                <img src="../assets/erros.svg" class="erro-img">
 
+                <p class="modal-erro-login-txt">Combinação de apelido e senha inválido, verifique se está correto e
+                    tente
+                    novamente!</p>
+
+                <button class="modal-btn-ok" onclick="toggleModalLogin()">OK</button>
+            </div>
         </div>
     </main>
     <script src="./scripts/user_icon.js"></script>
+    <script src="./scripts/usuario/login.js"></script>
+    <script src="./scripts/modal.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+.container-modal{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    top: 0;
+}
+
+.modal-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    height: 60%;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 530px;
+    top: 150px;
+}
+
+.erro-img {
+    height: 55%;
+    width: 40%;
+    padding: 55px 0;
+    animation: forwards balancar 1.5s;
+}
+
+.modal-erro-login-txt {
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    width: 80%;
+}
+
+.modal-btn-ok {
+    cursor: pointer;
+    padding: 15px 45px;
+    margin: 25px 0;
+    border-radius: 5px;
+    background-color: #B73E3E;
+    border: 0;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    box-shadow: 3px 3px 5px 0px rgba(194, 194, 194, 1);
+}
+
+.modal-btn-ok:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+@keyframes balancar {
+    0% {
+        transform: rotateX(60deg);
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: rotateX(180deg);
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: rotate(180deg);
+        transform: translateX(0px);
+    }
+}

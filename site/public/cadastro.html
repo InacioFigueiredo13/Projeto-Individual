@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se</title>
     <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="./css/modals/erro-login.css">
 </head>
 
 <body>
@@ -54,12 +55,14 @@
                 <h1>Cadastrar-se</h1>
                 <div class="cadastro-fields">
                     <input type="text" class="ipt-cadastro" id="ipt_apelido" placeholder="Apelido">
-                    <input type="text" class="ipt-cadastro" id="ipt_apelido" placeholder="E-mail">
-                    <input type="text" class="ipt-cadastro" id="ipt_apelido" placeholder="Senha">
-                    <input type="password" class="ipt-cadastro" id="ipt_senha" placeholder="Confirme sua senha">
+                    <input type="email" class="ipt-cadastro" id="ipt_email" placeholder="E-mail">
+                    <input type="password" class="ipt-cadastro" id="ipt_senha" placeholder="Senha">
+                    <input type="password" class="ipt-cadastro" id="ipt_confirmarSenha"
+                        placeholder="Confirme sua senha">
                 </div>
 
-                <button class="btn_cadastro">Cadastre-se</button>
+                <button class="btn_cadastro"
+                    onclick="cadastrar()">Cadastre-se</button>
 
                 <div class="login-redirect">
                     <p> Já tem uma conta?<a href="./login.html"> Faça login</a>!</p>
@@ -70,10 +73,20 @@
                 <img class="logo" src="./assets/logo.png" alt="logo">
             </div>
         </div>
+        </div>
+        <div class="container-modal" id="container-modal-cadastro">
+            <div class="modal-box" id="modal-box">
+                <img src="../assets/erro-cadastro.svg" class="erro-img">
 
+                <p class="modal-erro-login-txt"></p>
+
+                <button class="modal-btn-ok" onclick="toggleModalCadastro()">OK</button>
+            </div>
         </div>
     </main>
     <script src="./scripts/user_icon.js"></script>
+    <script src="./scripts/usuario/cadastrar.js"></script>
+    <script src="./scripts/modal.js"></script>
 </body>
 
 </html>
