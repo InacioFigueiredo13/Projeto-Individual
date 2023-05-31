@@ -3,9 +3,12 @@ var router = express.Router();
 
 var pilotosController = require("../controllers/pilotosController");
 
-router.get("/ultimas/:idAquario", function (req, res) {
-    pilotosController.buscarUltimasMedidas(req, res);
+router.get("/listarPilotos", function (req, res) {
+    pilotosController.listarPilotos(req, res);
 });
 
+router.get("/rankingPilotos", function(req, res){
+    pilotosController.rankingPilotos(req, res);
+})
 
 module.exports = router;

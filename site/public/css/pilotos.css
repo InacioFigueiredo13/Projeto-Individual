@@ -193,6 +193,8 @@ body {
     background-color: #B73E3E;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    min-width: 65%;
+    max-width: 65%;
 }
 
 .infos-ranking {
@@ -208,7 +210,7 @@ body {
 }
 
 .infos-ranking img {
-    width: 100px;
+    width: 130px;
     height: 100px;
 }
 
@@ -242,6 +244,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
     padding: 10px 0;
 }
 
@@ -281,8 +284,16 @@ body {
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
 }
 
+
+.pontos-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 .card-piloto .dif-pontos-img {
     width: 50px;
