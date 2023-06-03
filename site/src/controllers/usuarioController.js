@@ -35,14 +35,12 @@ function entrar(req, res) {
 }
 
 function cadastrar(req, res) {
-    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var apelido = req.body.apelidoServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
 
-    // Faça as validações dos valores
     if (apelido == undefined) {
-        res.status(400).send("Seu nome está undefined!");
+        res.status(400).send("Seu apelido está undefined!");
     } else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {

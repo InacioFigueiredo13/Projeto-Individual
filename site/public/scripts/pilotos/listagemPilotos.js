@@ -10,12 +10,6 @@ function obterPilotos() {
                 json.forEach(piloto => {
                     console.log(piloto);
 
-                    // if (condition) {
-
-                    // } else { 
-
-                    // }
-
                     document.querySelector(".container-pilotos").innerHTML +=
                         `
                         <div class="card-piloto">

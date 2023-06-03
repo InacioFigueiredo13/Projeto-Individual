@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes Piloto</title>
+    <link rel="stylesheet" href="./css/detalhesPiloto.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <nav class="nav-container">
+        <div class="nav-left-content">
+            <div class="logo">
+                <img src="./assets/logo_white.png" alt="Logo">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="./index.html">
+                            INÍCIO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./eventos.html">
+                            EVENTOS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pilotos.html">
+                            PILOTOS
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-right-content">
+            <a class="agenda-icon">
+                <img src="./assets/icon-agenda.png" alt="ICONE DE CALENDÁRIO">
+            </a>
+            <a class="login-icon" id="login_icon">
+                <img src="./assets/icon-user.png" alt="ICONE DO USUÁRIO">
+            </a>
+        </div>
+        <div class="user_login" id="user_login_cadastro">
+            <a href="#" id="logar">ENTRAR</a>
+            <a href="#" id="cadastrar">CADASTRAR-SE</a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="title-container">
+                <span>POSIÇÃO DO PILOTO: <span id="posicao-piloto"></span>°</span>
+            </div>
+            <img class="btn-like" src="./assets/estrela.png" id="btn_like">
+            <div class="ficha-piloto">
+                <div class="left-content">
+                    <img class="imgPiloto" id="foto-piloto" src="" alt="imagem do Piloto">
+                </div>
+                <div class="right-content">
+                    <div class="nome-nacionalidade">
+                        <p class="nome" id="nome"></p>
+                        <img class="imgBandeira" id="img-bandeira" src="" alt="imagem país">
+                    </div>
+                    <div class="outras-infos">
+                        <div>
+                            <p class="subtitulo-info">Idade</p>
+                            <p class="idade" id="idade"></p>
+                        </div>
+                        <div>
+                            <p class="subtitulo-info">Nome do Time</p>
+                            <p class="time-nome" id="time-nome"></p>
+                        </div>
+                        <div>
+                            <p class="subtitulo-info">Fabricante do carro</p>
+                            <p class="fabricante-nome" id="fab-carro"></p>
+                        </div>
+                        <div>
+                            <p class="subtitulo-info">Fabricante do pneu</p>
+                            <p class="fabricante-pneu" id="fab-pneu"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="dashboard">
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="./scripts/user_icon.js"></script>
+    <script src="./scripts/pilotos/detalhesPiloto.js"></script>
+</body>
+
+</html>

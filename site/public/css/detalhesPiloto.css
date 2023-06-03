@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -11,7 +11,6 @@ body {
     height: 100%;
     background-color: #DD5353;
 }
-
 
 .nav-container {
     display: flex;
@@ -92,7 +91,7 @@ body {
     transition: 300ms;
     padding: 10px;
     border-radius: 100px;
-    background-color: #c2c2c2c2;
+    background-color: #EDDBC0;
 }
 
 .nav-container .user_login {
@@ -136,118 +135,153 @@ body {
 
 .container {
     display: flex;
-    width: 100%;
-    height: 100%;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
-.right-content {
-    display: flex;
-    justify-content: center;
+.title-container {
+    background-color: white;
     width: 30%;
-    height: 85%;
-    background-position: center;
-    background-image: url(../assets/login-img.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #DBC8AC;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    align-self: flex-start;
 }
 
-.right-content .logo {
-    position: relative;
-    width: 200px;
-    height: 90px;
-    margin-top: 35px;
+.title-container span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 5px 0;
+    width: 100%;
+}
+
+hr {
+    margin: 20px 0;
+    width: 80%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ficha-piloto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 
 .left-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    width: 30%;
-    height: 85%;
-    background-color: #B73E3E;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    justify-content: center;
+    margin-top: 25px;
+    margin-right: 40px;
+    border-right: 3px solid #DBC8AC;
 }
 
-.left-content h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    color: #fff;
-    padding: 30px 0;
-    letter-spacing: 4px;
-    font-size: 2rem;
+.imgPiloto {
+    width: 100%;
+    height: 300px;
 }
 
-.login-fields {
+.right-content {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
-    width: 50%;
-}
-
-
-.login-fields .ipt-login:not(:first-child) {
-    margin-top: 15px;
-}
-
-.login-fields .ipt-login {
-    border: 0;
-    padding: 15px;
-    border-bottom: 3px ridge #DD5353;
-    background-color: transparent;
-    font-size: 0.9rem;
-    font-family: 'Lato', sans-serif;
-    transition: 0.5s;
-    color: #fff;
-}
-
-.login-fields .ipt-login::placeholder{
-    color: #DBC8AC;
-    letter-spacing: 1px;
-}
-
-.login-fields .ipt-login:focus {
-    outline: none;
-    border-bottom: 3px ridge #DBC8AC;
-}
-
-.btn_login {
-    font-family: 'Bebas Neue', sans-serif;
-    padding: 15px 60px;
-    font-size: 1.3rem;
-    letter-spacing: 4px;
-    color: #fff;
-    background-color: #DD5353;
-    border: 0;
-    border-radius: 10px;
-    margin: 30px 0;
-    box-shadow: 10px 9px 25px 0px rgba(0, 0, 0, 0.25);
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.btn_login:hover {
-    transform: scale(1.1);
-}
-
-.cadastro-redirect p {
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-    font-size: 0.8rem;
-    margin-bottom: 50px;
     margin-top: -20px;
-    font-style: italic;
-    line-height: 36px;
-    letter-spacing: 2px;
 }
 
-.cadastro-redirect a {
-    color: #DBC8AC;
+.right-content .nome-nacionalidade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.right-content .nome-nacionalidade .nome {
+    font-size: 2.5rem;
     font-weight: bold;
+    color: #fff;
+    font-family: 'Lato';
+    margin-right: 15px;
+}
+
+.imgBandeira {
+    width: 50px;
+    height: 30px;
+}
+
+.subtitulo-info {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Lato';
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
+.idade,
+.time-nome,
+.fabricante-nome,
+.fabricante-pneu {
+    font-size: 1rem;
+    color: #EDDBC0;
+    font-family: 'Lato';
+    margin-bottom: 10px;
+}
+
+.btn-like {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 160px;
+    right: 150px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+img[src*="./assets/estrela.png"]:hover {
+    content: url(../assets/estrela-marked.png);
+}
+
+
+.like {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 160px;
+    right: 150px;
+    cursor: pointer;
+    transition: 0.5s;
+    animation: animation_like 1s normal;
+}
+
+@keyframes animation_like {
+    0% {
+        transform: scale(1.1);
+        transform: rotateZ(80deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.title-toast-alert {
+    font-size: 1rem;
+    color: #DD5353;
+    font-family: 'Lato';
+}
+
+.footer-toast-alert {
+    font-size: 0.8rem;
+    color: #DD5353;
+    text-decoration: underline;
+    font-family: 'Lato';
 }

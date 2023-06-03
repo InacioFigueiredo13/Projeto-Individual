@@ -105,6 +105,7 @@ body {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
+    z-index: 5;
 }
 
 .nav-container .user_login a:hover {
@@ -534,11 +535,12 @@ body {
     width: 100%;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .piloto-informations {
     margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .piloto-card {
@@ -547,23 +549,10 @@ body {
     justify-content: center;
     flex-direction: column;
     width: 25%;
-    margin: 10px 15px;
     padding: 25px 0;
     background-color: #B73E3E;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.piloto-card button {
-    border: 0;
-    background-color: transparent;
-    margin-left: 270px;
-    margin-top: -15px;
     cursor: pointer;
-}
-
-.piloto-card button img {
-    height: 35px;
-    width: 35px;
 }
 
 .piloto-nome-bandeira {
@@ -577,15 +566,26 @@ body {
 }
 
 .piloto-nome-bandeira p {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 700;
     font-family: 'Lato';
     color: #fff;
     margin-right: 15px;
+    padding: 10px 0;
+}
+
+.piloto-nome-bandeira img{
+    width: 10%;
+    height: 10%;
+}
+
+.piloto-img{
+    width: 90%;
+    height: 90%;
 }
 
 .info-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #fff;
     font-weight: bold;
     font-family: 'Lato';
@@ -596,6 +596,7 @@ body {
 .info {
     font-weight: 500;
     font-family: 'Lato';
+    font-size: 0.9rem;
 }
 
 .ver-mais-piloto {
@@ -603,6 +604,7 @@ body {
     font-size: 2rem;
     font-family: 'Bebas Neue', sans-serif;
     margin-left: 15px;
+    margin-top: 25px;
 }
 
 footer .footer-container {

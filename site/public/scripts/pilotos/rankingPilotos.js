@@ -1,4 +1,4 @@
-function obterPilotos() {
+function obterRankingPilotos() {
     fetch("/pilotos/rankingPilotos", {
         method: "GET",
         headers: {
@@ -6,16 +6,15 @@ function obterPilotos() {
         },
     }).then(function (resposta) {
         if (resposta.ok) {
-            resposta.json().then(json => {
-                var maiorPontuacao = json[0].qtdPontos
+            resposta.json().then(pilotos => {
+                var maiorPontuacao = pilotos[0].qtdPontos
                 var difPontos = 0;
 
-                json.forEach(piloto => {
+                pilotos.forEach(piloto => {
                     difPontos = maiorPontuacao - piloto.qtdPontos;
-
                     document.querySelector(".container-pilotos").innerHTML +=
                         `
-                        <div class="card-piloto">
+                        <div class="card-piloto" data-id="${piloto.idPiloto}">
                         <div class="destaque">
                             <div class="infos-ranking">
                                 <img src="${piloto.fotoPiloto}" alt="Imagem Piloto">
@@ -57,7 +56,18 @@ function obterPilotos() {
     return false;
 }
 
-
 window.addEventListener("load", function () {
-    setTimeout(obterPilotos(), 1000)
+    setTimeout(obterRankingPilotos(), 1000)
+    setTimeout(() => {
+        var cardPiloto = document.querySelector(".container-pilotos");
+        [...cardPiloto.children].forEach(card_piloto => {
+            card_piloto.addEventListener("click", function () {
+                entrarCard(card_piloto.getAttribute('data-id'))
+            })
+        });
+    }, 1000);
 });
+
+function entrarCard(pilotoId) {
+    window.location.href = './pilotoDetalhes.html?id=' + pilotoId
+}

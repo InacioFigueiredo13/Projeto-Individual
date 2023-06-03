@@ -106,6 +106,7 @@ body {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
+    z-index: 5;
 }
 
 .nav-container .user_login a:hover {
