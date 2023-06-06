@@ -1,4 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
+   
+// });
+
+setTimeout(() => {
     const carousel = document.querySelector(".carousel-slides");
     const carouselItems = document.querySelectorAll(".evento-card-container");
     const itemWidth = carouselItems[0].offsetWidth;
@@ -24,4 +28,4 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#carousel-next").addEventListener("click", function () {
         moveCarousel("next");
     });
-});
+}, 1500);

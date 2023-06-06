@@ -44,7 +44,6 @@ window.addEventListener("load", function () {
     setTimeout(obterPodio(), 1000)
     setTimeout(() => {
         var cardPiloto = document.getElementById("pilotos");
-        console.log(cardPiloto);
         [...cardPiloto.children].forEach(card_piloto => {
             card_piloto.addEventListener("click", function () {
                 entrarCard(card_piloto.getAttribute('data-id'))

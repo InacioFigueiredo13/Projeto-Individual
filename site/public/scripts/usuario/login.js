@@ -1,4 +1,3 @@
-
 function entrar() {
 
     var apelidoVar = ipt_apelido.value;
@@ -7,47 +6,41 @@ function entrar() {
     if (apelidoVar == "" || senhaVar == "") {
         toggleModalLogin()
         return false;
-    }
-    else {
-        // nada de errado
-    }
+    } else {
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                apelidoServer: apelidoVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            if (resposta.ok) {
+                console.log(resposta);
 
-    console.log("FORM LOGIN: ", apelidoVar);
-    console.log("FORM SENHA: ", senhaVar);
+                resposta.json().then(json => {
 
-    fetch("/usuarios/autenticar", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            apelidoServer: apelidoVar,
-            senhaServer: senhaVar
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.APELIDO_USUARIO = json.apelido;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
+                    setTimeout(function () {
+                        window.location = "./index.html";
+                    }, 1000); // apenas para exibir o loading
+                });
+            } else {
+                console.log("Houve um erro ao tentar realizar o login!");
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    toggleModalLogin()
+                });
+            }
+        }).catch(function (erro) {
+            console.log(erro);
+            toggleModalLogin()
         })
-    }).then(function (resposta) {
-        if (resposta.ok) {
-            console.log(resposta);
-
-            resposta.json().then(json => {
-
-                sessionStorage.EMAIL_USUARIO = json.email;
-                sessionStorage.APELIDO_USUARIO = json.apelido;
-                sessionStorage.ID_USUARIO = json.idUsuario;
-
-                setTimeout(function () {
-                    window.location = "./index.html";
-                }, 1000); // apenas para exibir o loading
-            });
-        } else {
-            console.log("Houve um erro ao tentar realizar o login!");
-            resposta.text().then(texto => {
-                console.error(texto);
-                toggleModalLogin()
-            });
-        }
-    }).catch(function (erro) {
-        console.log(erro);
-        toggleModalLogin()
-    })
-    return false;
+        return false;
+    }
 }

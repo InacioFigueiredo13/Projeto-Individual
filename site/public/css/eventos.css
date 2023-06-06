@@ -202,8 +202,8 @@ body {
     color: #fff;
     font-family: 'Bebas Neue';
     line-height: 15px;
-    font-size: 2rem;
-    letter-spacing: 5px;
+    font-size: 1.75rem;
+    letter-spacing: 2px;
 }
 
 .localizacao-container {
@@ -234,7 +234,7 @@ body {
     margin: 25px 0;
 }
 
-.btn-marcado {
+.btn-marcar {
     padding: 10px 65px;
     background-color: transparent;
     border: 1px solid #fff;
@@ -242,6 +242,27 @@ body {
     font-size: 2rem;
     color: #fff;
     font-family: 'Bebas Neue', sans-serif;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn-marcar:hover {
+    color: #B73E3E;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.btn-marcado {
+    padding: 10px 65px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    color: #B73E3E;
+    background-color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .btn-marcado:hover {

@@ -8,6 +8,8 @@
     <title>Detalhes Piloto</title>
     <link rel="stylesheet" href="./css/detalhesPiloto.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/png" href="./assets/logo.png"/>
 </head>
 
 <body>
@@ -86,13 +88,53 @@
             </div>
             <hr>
             <div class="dashboard">
-                
+                <h1 class="title-dashboard">ANALYTICS</h1>
+                <div class="charts-geral">
+                    <div class="chart-likes-pilotos">
+                        <h1 class="chart-title">QUANTIDADE DE LIKES POR PILOTO</h1>
+                        <canvas id="chart_likes_pilotos">
+                        </canvas>
+                    </div>
+                    <div class="kpi-likes">
+                        <p class="kpi-text"><span id="dashboard-nome-piloto"></span> recebeu <span id="qtdLikesPiloto"
+                                class="marked"> </span>
+                            likes de <span id="qtdLikesTotal" class="marked"> </span> no total!</p>
+                        <div class="kpi-chart">
+                            <canvas id="chart_likes_pilotos_kpi"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="charts-porcentagem">
+                    <div class="chart-porcentagem">
+                        <h1 class="chart-title">PORCENTAGEM DE LIKES</h1>
+                        <div class="porcentagens">
+                            <canvas id="porcentagem-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-porcentagem-kpi">
+                        <div class="kpi-porcentagem-dados">
+                            <p class="dado" id="maior-likes"></p>
+                            <p class="dado-legenda">Mais Likes</p>
+                            <p class="nome-piloto-kpi" id="nome-piloto-maior"></p>
+                        </div>
+                        <div class="kpi-porcentagem-dados">
+                            <p class="dado" id="media-likes"></p>
+                            <p class="dado-legenda">Média de Likes</p>
+                        </div>
+                        <div class="kpi-porcentagem-dados">
+                            <p class="dado" id="menor-likes"></p>
+                            <p class="dado-legenda">Menos Likes</p>
+                            <p class="nome-piloto-kpi" id="nome-piloto-menor"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
     <script src="./scripts/user_icon.js"></script>
     <script src="./scripts/pilotos/detalhesPiloto.js"></script>
+    <script src="./scripts/pilotos/dashboard/dashboardLikes.js"></script>
 </body>
 
 </html>

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pilotos</title>
     <link rel="stylesheet" href="./css/pilotos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/png" href="./assets/logo.png"/>
 </head>
 
 <body>
@@ -55,10 +57,37 @@
             </div>
             <div class="container-pilotos">
             </div>
+            <hr>
+            <div class="dashboard-rankings">
+                <h1 class="title-dashboard">ANALYTICS</h1>
+                <div class="charts">
+                    <div class="ranking-geral-pilotos">
+                        <h1 class="chart-title">Ranking de Pilotos</h1>
+                        <div class="chart-ranking-pilotos">
+                            <canvas id="chart-ranking-pilotos" width="500" height="500"></canvas>
+                        </div>
+                    </div>
+                    <div class="secondary-rankings">
+                        <div class="ranking-geral-fab-carros">
+                            <h1 class="chart-title">Ranking dos Fabricantes de Carros</h1>
+                            <div class="chart-ranking-seconds">
+                                <canvas id="chart-ranking-carros"></canvas>
+                            </div>
+                        </div>
+                        <div class="ranking-geral-fab-pneus">
+                            <h1 class="chart-title">Ranking dos Fabricantes de Pneus</h1>
+                            <div class="chart-ranking-seconds">
+                                <canvas id="chart-ranking-pneus"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <script src="./scripts/user_icon.js"></script>
     <script src="./scripts/pilotos/rankingPilotos.js"></script>
+    <script src="./scripts/pilotos/dashboard/dashboardClassificacoes.js"></script>
 </body>
 
 </html>

@@ -187,7 +187,7 @@ hr {
 
 .imgPiloto {
     width: 100%;
-    height: 300px;
+    height: 280px;
 }
 
 .right-content {
@@ -205,7 +205,7 @@ hr {
 }
 
 .right-content .nome-nacionalidade .nome {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #fff;
     font-family: 'Lato';
@@ -213,12 +213,12 @@ hr {
 }
 
 .imgBandeira {
-    width: 50px;
+    width: 40px;
     height: 30px;
 }
 
 .subtitulo-info {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #fff;
     font-family: 'Lato';
@@ -284,4 +284,157 @@ img[src*="./assets/estrela.png"]:hover {
     color: #DD5353;
     text-decoration: underline;
     font-family: 'Lato';
+}
+
+.dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+}
+
+.title-dashboard {
+    font-size: 2.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #fff;
+    width: 30%;
+    margin-bottom: 70px;
+    text-align: center;
+    letter-spacing: 5px;
+    padding: 10px 0;
+}
+
+.charts-geral {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.chart-title {
+    font-size: 2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 5px;
+    padding: 20px 5px;
+    color: #DD5353;
+}
+
+.chart-likes-pilotos {
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 10px;
+    box-shadow: 10px 10px 20px 0px rgba(153, 73, 73, 0.5);
+}
+
+.kpi-likes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    min-height: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 10px 10px 20px 0px rgba(153, 73, 73, 0.5);
+}
+
+.marked {
+    color: #DD5353;
+}
+
+.kpi-text {
+    font-size: 1.1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 5px;
+    padding: 20px 10px;
+}
+
+.kpi-chart {
+    width: 285px;
+    height: 285px;
+}
+
+.porcentagens {
+    width: 300px;
+    height: 300px;
+}
+
+.charts-porcentagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    padding: 15px 0;
+}
+
+.chart-porcentagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+    max-height: 450px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 45px 0;
+    margin-right: -50px;
+    box-shadow: 10px 10px 20px 0px rgba(153, 73, 73, 0.5);
+}
+
+.chart-porcentagem-kpi {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 40%;
+    height: 50%;
+}
+
+.kpi-porcentagem-dados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 55%;
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 40px 0;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px 0px rgba(153, 73, 73, 0.5);
+}
+
+.kpi-porcentagem-dados .dado {
+    font-size: 1.25rem;
+    color: #DD5353;
+    font-family: 'Lato';
+    padding: 20px 0;
+}
+
+.kpi-porcentagem-dados .dado-legenda {
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.nome-piloto-kpi {
+    font-size: 1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    padding: 5px 0;
+    color: #DD5353;
+}
+
+#dashboard-nome-piloto {
+    color: #DD5353;
 }

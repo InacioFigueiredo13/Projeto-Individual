@@ -117,6 +117,7 @@ function tirarLike(req, res) {
             );
     }
 }
+
 module.exports = {
     rankingPilotos,
     podioPilotos,
