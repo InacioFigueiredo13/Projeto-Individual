@@ -7,6 +7,10 @@ router.get("/eventosUsuario/:idUsuario", function (req, res) {
     eventosController.obterEventosUsuario(req, res);
 })
 
+router.get("/eventosUsuario/detalhes/:idUsuario", function(req, res){
+    eventosController.obterEventosUsuarioDetalhes(req, res);
+})
+
 router.get("/listarEventos", function (req, res) {
     eventosController.obterListaEventos(req, res);
 })

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/eventos.css">
     <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/275995ea23.js" crossorigin="anonymous"></script>
     <title>Agenda de Eventos</title>
 </head>
 
@@ -37,12 +39,14 @@
             </div>
         </div>
         <div class="nav-right-content">
-            <a class="agenda-icon">
+            <a class="agenda-icon" id="agenda_icon">
                 <img src="./assets/icon-agenda.png" alt="ICONE DE CALENDÁRIO">
             </a>
             <a class="login-icon" id="login_icon">
                 <img src="./assets/icon-user.png" alt="ICONE DO USUÁRIO">
             </a>
+        </div>
+        <div class="agenda-eventos" id="agenda_eventos">
         </div>
         <div class="user_login" id="user_login_cadastro">
             <a href="#" id="logar">ENTRAR</a>
@@ -67,9 +71,9 @@
 
         </div>
     </main>
-    <script src="./scripts/eventos/eventos.js"></script>
     <script src="./scripts/carousel_agenda.js"></script>
     <script src="./scripts/user_icon.js"></script>
+    <script src="./scripts/eventos/eventos.js"></script>
 </body>
 
 </html>

@@ -8,6 +8,14 @@ function obterEventosUsuario(idUsuario) {
     return database.executar(instrucaoSql);
 }
 
+function obterEventosUsuarioDetalhes(idUsuario) {
+    var instrucaoSql = `
+     select descricao, data, logoEvento, localizacao from evento JOIN usuarioagenda ON evento.idEvento = usuarioagenda.fkEvento where fkUsuario = ${idUsuario};
+    `
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 function obterListaEventos() {
     var instrucaoSql = `
         select * from evento order by data asc;
@@ -36,5 +44,6 @@ module.exports = {
     obterEventosUsuario,
     obterListaEventos,
     marcarEvento,
-    desmarcarEvento
+    desmarcarEvento,
+    obterEventosUsuarioDetalhes
 }

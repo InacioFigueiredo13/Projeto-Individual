@@ -15,6 +15,21 @@ function obterEventosUsuario(req, res) {
     });
 }
 
+function obterEventosUsuarioDetalhes(req, res) {
+    var idUsuario = req.params.idUsuario;
+    eventosModel.obterEventosUsuarioDetalhes(idUsuario).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro os eventos do usuário.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
 function obterListaEventos(req, res) {
     eventosModel.obterListaEventos().then(function (resultado) {
         if (resultado.length > 0) {
@@ -85,5 +100,6 @@ module.exports = {
     obterEventosUsuario,
     obterListaEventos,
     marcarEvento,
-    desmarcarEvento
+    desmarcarEvento,
+    obterEventosUsuarioDetalhes
 }

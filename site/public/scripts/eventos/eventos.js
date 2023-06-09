@@ -2,6 +2,7 @@ var idUsuario = sessionStorage.getItem("ID_USUARIO")
 
 var listaEventosUsuario = [];
 
+// Função que pesquisa quais eventos o usuário ja marcou anteriormente e atribui no array listaEventosUsuario
 function obterEventosUsuario(idUsuario) {
     fetch(`/eventos/eventosUsuario/${idUsuario}`, {
         method: "GET",
@@ -10,6 +11,10 @@ function obterEventosUsuario(idUsuario) {
         },
     }).then(function (resposta) {
         if (resposta.ok) {
+            if (resposta.status == 204) {
+                console.log("Nenum evento marcado");
+                return false;
+            }
             resposta.json().then(eventos => {
                 for (let i = 0; i < eventos.length; i++) {
                     const evento = eventos[i];
@@ -28,6 +33,7 @@ function obterEventosUsuario(idUsuario) {
     return false;
 }
 
+// Função que pesquisa todos os eventos disponíveis no BD
 function obterListaEventos() {
     fetch(`/eventos/listarEventos`, {
         method: "GET",
@@ -48,15 +54,15 @@ function obterListaEventos() {
                     var mes = nomeMeses[dataEvento.getMonth()];
                     var ano = dataEvento.getFullYear();
 
-                    var dataFormatada = `${dia} DE ${mes}, ${ano}`
+                    var dataFormatada = `${dia} DE ${mes}, ${ano}`;
 
                     var btnClass = "";
 
                     if (listaEventosUsuario.indexOf(evento.idEvento) == -1) {
                         btnClass = "btn-marcar";
-                        textBtn = "MARCAR"
+                        textBtn = "MARCAR";
                     } else {
-                        textBtn = "MARCADO"
+                        textBtn = "MARCADO";
                         btnClass = "btn-marcado";
                     }
 
@@ -94,22 +100,45 @@ function obterListaEventos() {
     return false;
 }
 
+// Caso tenha algum usuário logado, pesquisar quais eventos ele ja tem marcado no bd
+if (idUsuario) {
+    obterEventosUsuario(idUsuario)
+}
 
+// obtendo todos os eventos do bd
 setTimeout(() => {
-    obterEventosUsuario(idUsuario);
     obterListaEventos();
 }, 1000);
 
+// Função que verifica se o evento ja se encontra na lista de evento do usuário, caso não esteja na lista, ele irá marcar o evento no bd e adicionar na lista, caso contrário, ele irá desmarcar o evento e retirar da lista
 function toggleMarcarEvento(idEvento) {
     var idEvento = idEvento;
-    if (listaEventosUsuario.indexOf(idEvento) == -1) {
+    if (!idUsuario) {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            iconColor: '#DD5353',
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            },
+            footer: `<a href="./login.html" class="footer-toast-alert">FAZER LOGIN OU CADASTRO</a>`
+        });
+        Toast.fire({
+            icon: 'error',
+            title: '<span class="title-toast-alert">Não é possível marcar um evento sem fazer login antes!</span>'
+        })
+    } else if (listaEventosUsuario.indexOf(idEvento) == -1) {
         marcarEvento(idEvento);
     } else {
         desmarcarEvento(idEvento);
     }
 }
 
-
+// Função que utiliza a rota de marcar o evento com algum id
 function marcarEvento(idEvento) {
     fetch(`/eventos/marcarEvento/${idUsuario}/${idEvento}`, {
         method: "POST",
@@ -129,6 +158,7 @@ function marcarEvento(idEvento) {
     });
 }
 
+// Função que utiliza a rota de desmarmarcar o evento com algum id
 function desmarcarEvento(idEvento) {
     fetch(`/eventos/desmarcarEvento/${idUsuario}/${idEvento}`, {
         method: "DELETE",
@@ -151,6 +181,7 @@ function desmarcarEvento(idEvento) {
     });
 }
 
+// Função para mudar o estilo do botão quando está marcado ou quando está para marcar
 function changeBtn(idEvento, change) {
     var btn = document.getElementById(`btn-marcar-${idEvento}`);
     if (change) {
