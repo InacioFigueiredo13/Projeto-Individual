@@ -3,10 +3,11 @@ USE bdDorifto;
 
 CREATE TABLE usuario(
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
-    apelido VARCHAR(20),
-    email VARCHAR(45),
+    apelido VARCHAR(20) UNIQUE,
+    email VARCHAR(45) UNIQUE,
     senha VARCHAR(45)
 );
+
 
 CREATE TABLE evento(
 	idEvento INT PRIMARY KEY AUTO_INCREMENT,
@@ -100,7 +101,6 @@ INSERT INTO evento(descricao, bandeiraPais, logoEvento, localizacao, data) VALUE
     ("ROUND 6 2023", "https://www.countryflags.com/wp-content/uploads/poland-flag-png-large.png", "https://driftmasters.gp/wp-content/uploads/2019/09/DMGP-Logo-28.png", "PGE NARODOWY, WARSAW, POLAND", "2023-09-15"),
     ("7ª Etapa Ultimate Drift", "https://www.countryflags.com/wp-content/uploads/brazil-flag-png-large.png", "https://ultimatedrift.com.br/wp-content/uploads/2021/03/UD600.png", "PENHA, SC, BRAZIL", "2023-09-23"),
     ("8ª e 9ª Etapas Ultimate Drift", "https://www.countryflags.com/wp-content/uploads/brazil-flag-png-large.png", "https://ultimatedrift.com.br/wp-content/uploads/2021/03/UD600.png", "RIBEIRÃO PRETO, SP, BRAZIL", "2023-11-18");
-SELECT * FROM evento;
 
 
 INSERT INTO carroFabricante(nomeCarroFabricante) VALUES
@@ -172,4 +172,7 @@ INSERT INTO rankingPilotos(posicao, qtdPontos, fkPiloto) VALUES
     (13, 103, 13),
     (14, 96, 14),
     (15, 96, 15);
-    
+        
+CREATE USER 'backend_dorifto'@'localhost' IDENTIFIED BY 'prjDorifto12';
+GRANT INSERT, SELECT, DELETE, UPDATE ON bdDorifto.* TO 'backend_dorifto'@'localhost';
+flush privileges; 

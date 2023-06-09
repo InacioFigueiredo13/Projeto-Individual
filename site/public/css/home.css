@@ -686,6 +686,11 @@ hr {
     cursor: pointer;
 }
 
+.piloto-card:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+
 .piloto-nome-bandeira {
     display: flex;
     width: 100%;
